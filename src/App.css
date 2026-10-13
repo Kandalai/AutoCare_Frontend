@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0b1120; /* Dark background matching dashboard */
+  color: #f8fafc;
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #151e32; /* Dark navbar */
+  padding: 15px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #60a5fa;
+}
+
+/* Layout Container */
+.container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Auth Forms (Login / Register) */
+.form-container {
+  background: #151e32;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 450px;
+  margin: 60px auto;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #f8fafc;
+  margin-bottom: 30px;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #f8fafc;
+  background-color: #0b1120;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Alerts */
+.alert {
+  padding: 12px 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #def7ec;
+  color: #03543f;
+  border: 1px solid #bcdefa;
+}
+
+.alert-danger {
+  background-color: #fde8e8;
+  color: #9b1c1c;
+  border: 1px solid #fbd5d5;
+}
+
+/* Jumbotron for Profile */
+.jumbotron {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.jumbotron h3 {
+  color: #1f2937;
+}
+/* Add to end of App.css */
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+.btn-danger {
+  padding: 8px 15px;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: auto;
+  margin-top: 0;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.vehicle-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.vehicle-card h4 {
+  margin-top: 0;
+  color: #1f2937;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.vehicle-card p {
+  color: #4b5563;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.card-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+/* Home Page Styles */
+.home-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.hero-section {
+  background: #ffffff;
+  padding: 60px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-outline {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.feature-card h3 {
+  color: #2563eb;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #4b5563;
+  line-height: 1.5;
+}
