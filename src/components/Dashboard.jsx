@@ -141,6 +141,10 @@ const Dashboard = () => {
   if (!currentUser) return <div style={{padding: '40px', textAlign: 'center'}}>Please log in to view your dashboard.</div>;
 
   const isMechanic = currentUser.role === 'ROLE_MECHANIC' || currentUser.role === 'ROLE_ADMIN';
+  const darkBg = "#0b1120";
+  const cardBg = "#151e32";
+  const textColor = "#f8fafc";
+  const mutedText = "#94a3b8";
 
   // Mechanic view remains a simple grid
   if (isMechanic) {
@@ -161,11 +165,6 @@ const Dashboard = () => {
   }
 
   // --- CUSTOMER ADVANCED UI (Dark Mode) ---
-  const darkBg = "#0b1120"; // Dark navy background
-  const cardBg = "#151e32";
-  const textColor = "#f8fafc";
-  const mutedText = "#94a3b8";
-
   if (vehicles.length === 0) {
     return (
       <div style={{minHeight: '80vh', backgroundColor: darkBg, color: textColor, padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
