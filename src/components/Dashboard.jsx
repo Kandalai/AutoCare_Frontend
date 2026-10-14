@@ -149,10 +149,10 @@ const Dashboard = () => {
         <h2>Platform Vehicles Directory</h2>
         <div style={{display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '20px'}}>
           {vehicles.map(v => (
-            <div key={v.id} style={{padding: '15px', backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #ddd', minWidth: '250px'}}>
-              <h4>{v.make} {v.model}</h4>
-              <p>User ID: {v.userId || 'N/A'}</p>
-              <p>Plate: {v.licensePlate}</p>
+            <div key={v.id} style={{padding: '15px', backgroundColor: cardBg, color: textColor, borderRadius: '8px', border: '1px solid #334155', minWidth: '250px'}}>
+              <h4 style={{color: textColor}}>{v.make} {v.model}</h4>
+              <p style={{color: mutedText}}>User ID: {v.userId || 'N/A'}</p>
+              <p style={{color: mutedText}}>Plate: {v.licensePlate}</p>
             </div>
           ))}
         </div>
