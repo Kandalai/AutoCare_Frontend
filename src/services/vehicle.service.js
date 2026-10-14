@@ -30,6 +30,7 @@ const deleteVehicle = (id) => {
 
 const VehicleService = {
   getVehicles,
+  getAllVehicles,
   getVehicle,
   addVehicle,
   deleteVehicle,
