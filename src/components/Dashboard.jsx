@@ -151,6 +151,10 @@ const Dashboard = () => {
     return (
       <div className="container" style={{padding: '20px'}}>
         <h2>Platform Vehicles Directory</h2>
+        {message && <p role="alert" style={{color: '#fca5a5'}}>{message}</p>}
+        {!message && vehicles.length === 0 && (
+          <p style={{color: mutedText}}>No registered vehicles to show yet.</p>
+        )}
         <div style={{display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '20px'}}>
           {vehicles.map(v => (
             <div key={v.id} style={{padding: '15px', backgroundColor: cardBg, color: textColor, borderRadius: '8px', border: '1px solid #334155', minWidth: '250px'}}>
